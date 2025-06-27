@@ -107,6 +107,7 @@ public class DocumentController {
 	    if (!resource.exists()) {
 	        throw new FileNotFoundException("File not found: " + doc.getFilePath());
 	    }
+        System.out.println("file download");
 
 	    return ResponseEntity.ok()
 	            .contentType(MediaType.parseMediaType(doc.getFileType()))
